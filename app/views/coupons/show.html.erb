@@ -1,0 +1,51 @@
+
+<% if @first_view == true %>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('#introModal').reveal();
+
+  });
+</script>
+<% end %>
+
+
+
+
+
+
+  <span class="has-tip tip-left" data-width="210" title="The Creator specifies what this Coupon does...hopefully.">Description</span>
+  <h2><%= @desc %><br/></h2>
+
+  <span class="has-tip tip-left" data-width="210" title="This is the Coupon-Code">Coupon-Code</span>
+  <input value='<%= @code %>' type='text' />
+
+
+
+  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon">Link</span>
+  <h3><%= link_to "http://#{@link}", "http://#{@link}" %></h3>
+  
+  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon">In how many days does this coupon expire?</span>
+  <h3>  <%= pluralize(@days_remaining, 'day') %></h3> 
+
+  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon">How many times can we request this coupon?</span>
+  <% if @enough_views == true %>
+  <h3> Very often. I promise.</h3>
+  
+  
+  <% else %>
+
+  
+  <h3> <%= pluralize(@views_remaining, 'time') %> </h3>
+  <% end %>
+  
+  
+ 
+
+
+
+
+
+
+
+
+

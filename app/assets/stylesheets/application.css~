@@ -1,0 +1,32 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require foundation_and_overrides
+ *= require_tree .
+ */
+
+
+body {
+background-image: linear-gradient(bottom, rgb(247,247,247) 26%, rgb(142,191,204) 63%, rgb(43,166,203) 82%);
+background-image: -o-linear-gradient(bottom, rgb(247,247,247) 26%, rgb(142,191,204) 63%, rgb(43,166,203) 82%);
+background-image: -moz-linear-gradient(bottom, rgb(247,247,247) 26%, rgb(142,191,204) 63%, rgb(43,166,203) 82%);
+background-image: -webkit-linear-gradient(bottom, rgb(247,247,247) 26%, rgb(142,191,204) 63%, rgb(43,166,203) 82%);
+background-image: -ms-linear-gradient(bottom, rgb(247,247,247) 26%, rgb(142,191,204) 63%, rgb(43,166,203) 82%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.26, rgb(247,247,247)),
+	color-stop(0.63, rgb(142,191,204)),
+	color-stop(0.82, rgb(43,166,203))
+);
+}

@@ -1,0 +1,36 @@
+  <%= form_for @coupon do |f| %>
+  <span class="has-tip tip-left" data-width="210" title="Tell us something about the Coupon">Tell us what can we do with it?</span>
+  <%= f.text_field :description %><br />
+
+  <span class="has-tip tip-left" data-width="210" title="Enter the Code you want to push.">Now we need the Secret Code from you</span>
+  <%= f.text_field :code %><br />
+
+  <span class="has-tip tip-left" data-width="210" title="Give us the link where we can redeem the coupon">And where can we use it? Give us the link. Without http://</span>
+  <%= f.text_field :link %><br />
+  <span class="has-tip tip-left" data-width="210" title="It's optional, if you don't know it we assume 7 Days.">In how many days is the Coupon expired?</span>
+  <%= f.text_field :expire_after_days %><br />
+  <span class="has-tip tip-left" data-width="210" title="It's optional , too. We make an educated guess.">How many people can view or use it?</span>
+  <%= f.text_field :expire_after_views %><br />
+  
+  <p><span class="has-tip tip-left" data-width="210" title="Thank you.">That was easy. Mind to share?</span><p>
+  <%= f.submit 'Push it !', :class => ' nice radius blue button' %>
+  <% end %>
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

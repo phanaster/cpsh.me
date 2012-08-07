@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PasswordPusher::Application.config.secret_token = 'b7efd5d3d967b3b669d439c371329cc990616b9dd47bf02c42dedb3c74a9d54e30dfd52323480623acc92fdec88b79d2cf9e211b1fd8a946d008c4e1f3162b28'
+Cpshme::Application.config.secret_token = '687ab465e75c184bd1170fd3ba75a4c6655dd0753b24edf895386d1829dd395e2d5947604cd5dbc626442b6803b2d3db04153a222c14910950165de80f1b2b8e'

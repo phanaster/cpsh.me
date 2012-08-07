@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html class="ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "cpsh.me - Push me a Coupon" %></title>
+  
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "application" %>
+	
+	<!-- Included JS Files  -->
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="rad_grad">
+<header class="row" >
+    <section class="twelve columns">
+      <h1><%= link_to "cpsh.me", :root %></h1>
+      <h3>You have a Coupon? Push it in here and share it with your friends and foes !</h3>
+      </section>
+</header>
+
+<div class="row">
+  <article class="eight columns" style="padding-top:2em;">
+    
+  
+  <%= yield %>
+  
+
+
+    </article>
+  </div>
+
+
+<footer class="row">
+  <section class="twelve columns" style="padding-top:2em;">
+    
+    <p>I was inspired by <%= link_to "PasswordPusher", "http://www.pwpush.com" %>. You can find this on <%= link_to "Github", "http://www.github.com/repoofme" %>. And I am <%= link_to "Robin", "http://www.twitter.com/medicinicmath" %>. Hi! You can find an <%= link_to "Impressum", "/impressum" %> here. I used and liked <%= link_to "Foundation", "http://foundation.zurb.com/" %> to style this a bit. </p>
+  </section>
+</footer>
+
+
+<div class = "rad_grad">
+<div id="introModal" class="reveal-modal">
+  
+  <h2>Now share it !</h2>
+  <p class="lead">Here is your link.</p>
+  <p><input value='<%= request.url%>'type='text' /></p>
+  <p class="lead"> Click anywhere or on the X to close it.</p>
+  <a class="close-reveal-modal">&#215;</a>
+  </div>
+</div>
+</div>
+</body>
+</html>

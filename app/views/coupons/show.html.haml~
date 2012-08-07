@@ -1,0 +1,46 @@
+<div class ="container">
+<div class ="row">
+
+<div class ="twelve columns">
+  
+  - if @coupon.expired
+    %p
+      We apologize but...
+     
+      This coupon has expired.
+    %p
+      - if @views_remaining < 0
+        == The coupon has hit it's chosen maximum view count of #{@coupon.expire_after_views}.
+      - elsif @days_remaining < 0
+        == The coupon has hit it's chosen maximum lifetime of #{@coupon.expire_after_days} days.
+      
+  - else
+    - if @first_view
+      .share_note
+        == This is your coupon.  Use this link to share it: 
+        %p.url
+          %input{ :value => "#{request.url}", :spellcheck => "false", :onfocus => '$(this).focus(); $(this).select();', :onclick => '$(this).select();' }
+         
+        %br/
+        %span.note
+          This note won't be shown again for this coupon...
+          %br/
+          Don't believe me?  Go ahead.  Hit reload...
+    %p
+      Your coupon is...
+  
+    %p
+      <h3> #{@desc} </h3>
+    %p
+      %input{ :value => "#{@code}", :spellcheck => "false", :onfocus => '$(this).focus(); $(this).select();', :onclick => '$(this).select();' }
+    %p
+      
+      %a{:href=> "#{@link}"} Click here for the Coupon Website !
+    %p
+      - if @views_remaining == 0
+        == This coupon will be deleted in #{pluralize(@days_remaining, 'day')} or #{@views_remaining} more views (this is the last view).
+      - else
+        == This coupon will be deleted in #{pluralize(@days_remaining, 'day')} 
+        == or #{pluralize(@views_remaining, 'more view')}.    
+    
+

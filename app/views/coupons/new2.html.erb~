@@ -1,0 +1,1 @@
+<h3><%= link_to "Visit Other Site", "http://#{@link}" %></h3>

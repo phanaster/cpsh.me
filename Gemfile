@@ -1,64 +1,44 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '3.1.2'
+gem 'rails', '3.2.7'
 
-group :development, :test, :private do
-  gem "sqlite3"
-end
+# Bundle edge Rails instead:
+# gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :production do
-  gem 'pg'
-end
-
-group :development, :test do
-  gem 'silent-postgres'
-  gem "ruby-debug19", :platforms => :ruby_19
-  gem "ruby-debug", :platforms => :ruby_18
-  gem "rspec-rails", ">= 2.0.1"
-  gem "rspec"
-  gem "rspec-core"
-  gem "rspec-expectations"
-  gem "rspec-mocks"
-  gem "blueprints"
-  gem "nifty-generators"
-end
-
-gem 'json'
-gem 'haml'
-gem 'haml-rails'
-gem 'fastercsv' # Only required on Ruby 1.8 and below
-gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+gem 'sqlite3'
 gem 'therubyracer'
-gem 'ezcrypto', :git => 'git://github.com/pglombardo/ezcrypto.git'
-gem 'modernizr-rails', :git => 'git://github.com/russfrisch/modernizr-rails.git'
-gem "high_voltage"
+
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5.rc.2'
-  gem 'coffee-rails', '~> 3.1.1'
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platforms => :ruby
+  # Add these gems
+  gem 'compass-rails', '~> 1.0.3'
+  gem 'zurb-foundation', '~> 3.0.1'
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
-gem 'delayed_job_active_record'
 
+gem 'thin'
+gem "mongoid", "~> 3.0.0"
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
-# Use unicorn as the web server
+# To use Jbuilder templates for JSON
+# gem 'jbuilder'
+
+# Use unicorn as the app server
 # gem 'unicorn'
-gem 'thin'
-gem 'capistrano'
 
+# Deploy with Capistrano
+# gem 'capistrano'
 
-gem "mocha", :group => :test
-
-gem "devise"
-gem "omniauth"
-gem 'omniauth-openid'
-gem 'omniauth-twitter'
-
-
+# To use debugger
+# gem 'debugger'

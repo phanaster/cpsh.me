@@ -1,0 +1,17 @@
+== form_for @password do |f|
+  %p
+    
+    = f.text_field(:payload)
+
+  %p
+    
+    = f.text_field(:payload2)
+  
+    
+  %p
+    = f.submit(:value => "Push it!")
+
+
+
+
+ 
