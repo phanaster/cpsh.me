@@ -57,7 +57,7 @@
 // $ratio: $golden;
 // $base-size: 14px 44px;
 
-div.rad_grad {
+.rad_grad {
   background: -moz-radial-gradient(center, white, #aaddff);
   /* Firefox */
   background: -webkit-radial-gradient(center, white, #aaddff);

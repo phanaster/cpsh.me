@@ -21,13 +21,13 @@
 
 
 
-  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon">Link</span>
+  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon, if this Link is Suspicious Report it to me !">Link</span>
   <h3><%= link_to "http://#{@link}", "http://#{@link}" %></h3>
   
-  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon">In how many days does this coupon expire?</span>
+  <span class="has-tip tip-left" data-width="210" title="Thats useful , if its expired we show it.">In how many days does this coupon expire?</span>
   <h3>  <%= pluralize(@days_remaining, 'day') %></h3> 
 
-  <span class="has-tip tip-left" data-width="210" title="Follow this Link to the Coupon">How many times can we request this coupon?</span>
+  <span class="has-tip tip-left" data-width="210" title="Enough probably means over a hundred left.">How many times can we request this coupon?</span>
   <% if @enough_views == true %>
   <h3> Very often. I promise.</h3>
   

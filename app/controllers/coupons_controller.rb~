@@ -76,6 +76,7 @@ class CouponsController < ApplicationController
       format.json { render :json => @coupon }
     end
   end
+
   # GET /coupons/expired
   def expired
   end

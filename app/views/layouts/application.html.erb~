@@ -47,7 +47,7 @@
 <footer class="row">
   <section class="twelve columns" style="padding-top:2em;">
     
-    <p>I was inspired by <%= link_to "PasswordPusher", "http://www.pwpush.com" %>. You can find this on <%= link_to "Github", "http://www.github.com/repoofme" %>. And I am <%= link_to "Robin", "http://www.twitter.com/medicinicmath" %>. Hi! You can find an <%= link_to "Impressum", "/impressum" %> here. I used and liked <%= link_to "Foundation", "http://foundation.zurb.com/" %> to style this a bit. </p>
+    <p>I was inspired by <%= link_to "PasswordPusher", "http://www.pwpush.com" %>. You can find this on <%= link_to "Github", "https://github.com/phanaster/cpsh.me" %>. And I am <%= link_to "Robin", "http://www.twitter.com/medicinicmath" %>. Hi! You can find an <%= link_to "Impressum", "/impressum" %> here. I used and liked <%= link_to "Foundation", "http://foundation.zurb.com/" %> to style this a bit. </p>
   </section>
 </footer>
 

@@ -1,4 +1,15 @@
-  <%= form_for @coupon do |f| %>
+  <%= form_for (@coupon) do |f| %>
+
+  <% if @coupon.errors.any? %>
+  <h4><%= pluralize(@coupon.errors.count, "error") %> prohibited this coupon from being saved:</h4>
+  
+  <% @coupon.errors.full_messages.each do |msg| %>
+  <p><%= msg %><p>
+  <% end %>
+  
+  <% end %>
+
+
   <span class="has-tip tip-left" data-width="210" title="Tell us something about the Coupon">Tell us what can we do with it?</span>
   <%= f.text_field :description %><br />
 
@@ -16,7 +27,15 @@
   
   <p><span class="has-tip tip-left" data-width="210" title="Thank you.">That was easy. Mind to share?</span><p>
   <%= f.submit 'Push it !', :class => ' nice radius blue button' %>
+
+  
+  
   <% end %>
+
+ 
+
+
+  
 
 
   

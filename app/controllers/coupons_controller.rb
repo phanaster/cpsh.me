@@ -112,8 +112,8 @@ class CouponsController < ApplicationController
     @coupon.expire_after_views = params[:coupon][:expire_after_views]
     
     # Check ranges - no max currently
-    @coupon.expire_after_days = 7 if @coupon.expire_after_days < 0
-    @coupon.expire_after_views = 99999 if @coupon.expire_after_views < 1
+    @coupon.expire_after_days = 7 if @coupon.expire_after_days.blank?
+    @coupon.expire_after_views = 99999 if @coupon.expire_after_views.blank?
     
     @coupon.url_token = rand(36**16).to_s(36)
     
